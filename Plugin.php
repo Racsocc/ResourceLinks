@@ -2,12 +2,12 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 /**
- * 资源链接插件，可添加官网、云盘、仓库等资源链接
+ * 资源链接插件，可添加官网、云盘、仓库等资源链接 | <a href="https://github.com/Racsocc/ResourceLinks" target="_blank">GitHub仓库</a>
  * 
  * @package ResourceLinks
  * @author RacsoCC
- * @version 1.0.0
- * @link http://typecho.org
+ * @version 1.0.1
+ * @link https://github.com/Racsocc/ResourceLinks
  */
 class ResourceLinks_Plugin implements Typecho_Plugin_Interface
 {
