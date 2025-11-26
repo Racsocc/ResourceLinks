@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+/build/
+/dist/
+.idea/
+.vscode/
+需求文档.md

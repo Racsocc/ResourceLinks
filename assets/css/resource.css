@@ -1,0 +1,222 @@
+:root {
+    --res-primary: #4a90e2;
+    --res-primary-hover: #357abd;
+    --res-text: #333;
+    --res-text-secondary: #666;
+    --res-bg: #f8f9fa;
+    --res-border: #e9ecef;
+    --res-card-bg: #fff;
+    --res-radius: 8px;
+    --res-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --res-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.resource-plugin-box {
+    margin: 2em 0;
+    padding: 1.5em;
+    background: var(--res-bg);
+    border-radius: var(--res-radius);
+    /* border: 1px solid var(--res-border); */
+    /* Optional: remove border for cleaner look */
+}
+
+.resource-plugin-box h3,
+.resource-plugin-box h5 {
+    margin: 0 0 1.2em;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--res-text);
+    position: relative;
+    padding-left: 12px;
+}
+
+.resource-plugin-box h3::before,
+.resource-plugin-box h5::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 16px;
+    background: var(--res-primary);
+    border-radius: 2px;
+}
+
+/* List Style */
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    background: var(--res-card-bg);
+    padding: 12px 16px;
+    border-radius: var(--res-radius);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.resource-item:hover {
+    border-color: var(--res-primary);
+    box-shadow: var(--res-shadow);
+    transform: translateX(2px);
+}
+
+.resource-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex: 1;
+    min-width: 0;
+    /* Fix flex text overflow */
+}
+
+.resource-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--res-primary);
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.resource-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--res-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.resource-link:hover .resource-title {
+    color: var(--res-primary);
+}
+
+.resource-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.resource-code {
+    font-size: 12px;
+    color: var(--res-text-secondary);
+    background: #f1f3f5;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.resource-copy-btn {
+    background: white;
+    border: 1px solid #ddd;
+    color: var(--res-text-secondary);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.resource-copy-btn:hover {
+    border-color: var(--res-primary);
+    color: var(--res-primary);
+    background: rgba(74, 144, 226, 0.05);
+}
+
+/* Card Style */
+.resource-list.card-mode {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.resource-list.card-mode .resource-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100%;
+    border: 1px solid var(--res-border);
+}
+
+.resource-list.card-mode .resource-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--res-shadow-hover);
+    border-color: transparent;
+}
+
+.resource-list.card-mode .resource-link {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.resource-list.card-mode .resource-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    margin-right: 0;
+    border-radius: 12px;
+}
+
+.resource-list.card-mode .resource-title {
+    font-size: 16px;
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.resource-list.card-mode .resource-meta {
+    width: 100%;
+    margin-left: 0;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed var(--res-border);
+    justify-content: space-between;
+}
+
+/* Locked State */
+.resource-locked {
+    text-align: center;
+    padding: 40px;
+    background: var(--res-card-bg);
+    border-radius: var(--res-radius);
+    border: 1px dashed #ddd;
+}
+
+.resource-locked p {
+    color: var(--res-text-secondary);
+    margin-bottom: 20px;
+}
+
+.resource-btn-lock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    background: var(--res-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.resource-btn-lock:hover {
+    background: var(--res-primary-hover);
+    color: white;
+}

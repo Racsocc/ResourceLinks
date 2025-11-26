@@ -1,0 +1,110 @@
+.resource-manager {
+    background: #FFF;
+    border: 1px solid #D9D9D6;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.resource-manager h3 {
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-item {
+    background: #F6F6F3;
+    border: 1px solid #E9E9E6;
+    padding: 8px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: move;
+    border-radius: 2px;
+}
+
+.resource-item.moving {
+    opacity: 0.4;
+    border: 1px dashed #999;
+    background: #fff;
+}
+
+.resource-item.over {
+    border: 1px solid #467B96;
+    background: #eef;
+}
+
+.resource-item .handle {
+    cursor: move;
+    color: #999;
+}
+
+.resource-item .info {
+    flex: 1;
+}
+
+.resource-item .actions {
+    display: flex;
+    gap: 5px;
+}
+
+.resource-form {
+    margin-top: 10px;
+    padding: 10px;
+    background: #F9F9F9;
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+}
+
+.resource-form .form-group {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.resource-form .form-group label {
+    width: 80px;
+    font-weight: bold;
+}
+
+.resource-form .form-group input,
+.resource-form .form-group select {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+}
+
+.resource-btn {
+    padding: 5px 10px;
+    background: #467B96;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+.resource-btn:hover {
+    background: #3A647A;
+}
+
+.resource-btn.delete {
+    background: #D9534F;
+}
+
+.resource-btn.delete:hover {
+    background: #C9302C;
+}
+
+/* Visibility Control */
+.resource-visibility {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #DDD;
+}
