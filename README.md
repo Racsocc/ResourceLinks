@@ -2,6 +2,14 @@
 
 ResourceLinks 是一款功能强大的 Typecho 资源链接管理插件。它允许你在文章或页面底部优雅地展示各种资源链接（如官网、网盘、代码仓库等），并提供丰富的自定义选项和交互功能。
 
+## 📸 截图预览
+
+<div align="center">
+    <img src="images/1.png" alt="预览图1" width="30%" />
+    <img src="images/2.png" alt="预览图2" width="30%" />
+    <img src="images/3.png" alt="预览图3" width="30%" />
+</div>
+
 ## ✨ 主要特性
 
 *   **多种资源类型支持**：
